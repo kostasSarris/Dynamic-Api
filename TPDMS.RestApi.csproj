@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D74B78AB-5EA1-4FE3-B7C0-6AEA48F96E5C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TPDMS.RestApi</RootNamespace>
+    <AssemblyName>TPDMS.RestApi</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ApplicationInsights">
+      <Version>2.9.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.TelemetryCorrelation" Version="1.0.5" />
+    <PackageReference Include="Microsoft.AspNet.WebApi" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Cors">
+      <Version>5.2.7</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.WebApi.WebHost" Version="5.2.7" />
+    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore">
+      <Version>2.1.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer">
+      <Version>2.1.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Web.Infrastructure" Version="1.0.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Newtonsoft.Json.Schema">
+      <Version>3.0.10</Version>
+    </PackageReference>
+    <PackageReference Include="NLog">
+      <Version>4.6.2</Version>
+    </PackageReference>
+    <PackageReference Include="NLog.Config">
+      <Version>4.6.2</Version>
+    </PackageReference>
+    <PackageReference Include="Serilog">
+      <Version>2.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="Serilog.Sinks.MSSqlServer">
+      <Version>5.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="Serilog.Sinks.RollingFile">
+      <Version>3.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="SI.Abstractions">
+      <Version>1.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="SI.Core">
+      <Version>4.2.104</Version>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel.Annotations">
+      <Version>4.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.Common">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="4.5.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt">
+      <Version>5.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.Http">
+      <Version>4.3.4</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.Serialization.Primitives">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.ProtectedData">
+      <Version>4.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.ValueTuple">
+      <Version>4.3.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\JWTAuthenticationFilter.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\BaseApiController.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
+    <Compile Include="CustomExceptions\ExceptionToStatusCodeMapper.cs" />
+    <Compile Include="CustomExceptions\FieldSizeViolationException.cs" />
+    <Compile Include="CustomExceptions\JsonSchemaException.cs" />
+    <Compile Include="CustomExceptions\MandatoryArgumentException.cs" />
+    <Compile Include="CustomExceptions\WrongTypeException.cs" />
+    <Compile Include="CustomExceptions\UnsupportedOperationException.cs" />
+    <Compile Include="CustomExceptions\Validations.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\extensions.cs" />
+    <Compile Include="Filters\ExceptionHandlingAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\admUsers.cs" />
+    <Compile Include="Models\admUsersRoles.cs" />
+    <Compile Include="Models\appDomains.cs" />
+    <Compile Include="Models\AuthToken.cs" />
+    <Compile Include="Models\C33Dispatch.cs" />
+    <Compile Include="Models\C42Order.cs" />
+    <Compile Include="Models\C42Order_aUIs.cs" />
+    <Compile Include="Models\C42Order_upUIs.cs" />
+    <Compile Include="Models\DataTypes.cs" />
+    <Compile Include="Models\DeviceStatus.cs" />
+    <Compile Include="Models\EconomicOperators.cs" />
+    <Compile Include="Models\Entities.cs" />
+    <Compile Include="Models\EntityFields.cs" />
+    <Compile Include="Models\EntityKeys.cs" />
+    <Compile Include="Models\EOFacilities.cs" />
+    <Compile Include="Models\EOIDs.cs" />
+    <Compile Include="Models\Error.cs" />
+    <Compile Include="Models\Events.cs" />
+    <Compile Include="Models\EventTypes.cs" />
+    <Compile Include="Models\ExceptionReturn.cs" />
+    <Compile Include="Models\FacilityFIDs.cs" />
+    <Compile Include="Models\Industries.cs" />
+    <Compile Include="Models\IndustrySectors.cs" />
+    <Compile Include="Models\Machines.cs" />
+    <Compile Include="Models\MappingFields.cs" />
+    <Compile Include="Models\Mappings.cs" />
+    <Compile Include="Models\Messages.cs" />
+    <Compile Include="Models\Processes.cs" />
+    <Compile Include="Models\RequestBase.cs" />
+    <Compile Include="Models\SIRequestContext.cs" />
+    <Compile Include="Models\TestEntity.cs" />
+    <Compile Include="Models\TokenRequest.cs" />
+    <Compile Include="Models\TPDMSDbModel.cs" />
+    <Compile Include="Models\Traders.cs" />
+    <Compile Include="Models\Vehicles.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="services\Duplicates.cs" />
+    <Compile Include="services\EventGenerator.cs" />
+    <Compile Include="services\Helper.cs" />
+    <Compile Include="services\IMapping.cs" />
+    <Compile Include="services\Mapping.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\SI.Identity\source.git\SI.Identity.csproj">
+      <Project>{d60c8b25-cbbe-4fed-bf54-ce07e0eea54a}</Project>
+      <Name>SI.Identity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TPDMS.Portal\source.git\CodeProcessService\TPDMS.CodeProcessService.csproj">
+      <Project>{3ac12838-d2f7-47b9-ab52-3afd012d4488}</Project>
+      <Name>TPDMS.CodeProcessService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TPDMS.Portal\source.git\DataLayer\TPDMS.DataLayer.csproj">
+      <Project>{3cf521d5-d37d-4652-a95e-7cb3e93a49ff}</Project>
+      <Name>TPDMS.DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusinessLayer\TPDMS.BusinessLayer.csproj">
+      <Project>{4ec31eaa-6bf5-4bc7-a6be-02d712081c01}</Project>
+      <Name>TPDMS.BusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="TPDMS.RestApi-Calls.postman_collection.json" />
+    <None Include="Properties\PublishProfiles\Papappservice - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\Papappservice - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\papappservice-TpdmsApi - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\papappservice-TpdmsApi - FTP1.pubxml" />
+    <None Include="Properties\PublishProfiles\papappservice-TpdmsApi - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\papappservice-TpdmsApi - Web Deploy1.pubxml" />
+    <None Include="Properties\PublishProfiles\slidemo-tpdmsqa-api - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\slidemo-tpdmsqa-api - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\slidemo-tpdmsqa-api - Web Deploy.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1619</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1350/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

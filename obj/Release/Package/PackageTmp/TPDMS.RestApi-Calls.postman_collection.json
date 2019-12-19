@@ -1,0 +1,437 @@
+{
+  "info": {
+    "_postman_id": "d85a6c61-33c8-4b99-88e6-4810a515e95b",
+    "name": "TPDMS.RestApi-Calls",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Authorization",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"audienceName\": \"test\",\n\t\"secret\": \"123456\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:1350/api/auth/token",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "1350",
+          "path": [
+            "api",
+            "auth",
+            "token"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SendEvent_Dispatch_33",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0IiwianRpIjoiYTEyZDUwNjQtNGJiYy00NWI1LWE5ODYtYjkwZWZhMWZjZTlkIiwiZXhwIjoxNTU0MzY4NDczLCJpc3MiOiJzZWxmIiwiYXVkIjoidGVzdCJ9.goJHkA1v40mEmVBoPsNWAwFdMZ4Yic0Kxo5kHVgy_GYFFmLFAJ-U7HMqJeRD6kD2doU1QbbjhYzwdz4q2ojkdQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"File_Date\": \"2019-05-28T08:45:20\",\r\n\t\"File_ID\": \"ftp33-3_20190528084520.csv\",\r\n\t\"Order_Number\": \"O-356\",\r\n\t\"Message_Type\": \"3-3\",\r\n\t\"Event_Time\": \"2019-05-28T08:45:20\",\r\n\t\"F_ID\": \"EZD145689-F1\",\r\n\t\"Destination_ID1\": 2,\r\n\t\"Destination_ID2\": \"F-654\",\r\n\t\"Destination_ID5\": \"6\",\r\n\t\"DepartmentId\" : null,\r\n\t\"DepartmentCode\" : null,\r\n\t\"EO_ID\": \"EZD145689\",\r\n\t\"Transport_mode\": 3,\r\n\t\"Transport_vehicle\": \"���-4536\",\r\n\t\"Transport_cont1\": false,\r\n\t\"Transport_cont2\": \"7\",\r\n\t\"Transport_s1\": false,\r\n\t\"Transport_s2\": \"6\",\r\n\t\"EMCS\": false,\r\n\t\"EMCS_ARC\": \"20\",\r\n\t\"SAAD\": false,\r\n\t\"SAAD_number\": \"3\",\r\n\t\"Exp_Declaration\": false,\r\n\t\"Exp_ DeclarationNumber\": \"1\",\r\n\t\"UI_Type\": 3,\r\n\t\"Dispatch_comment\": \"������������ ��������� D-356\",\r\n\t\"upUIs\": [\r\n\t\t\"AADEGR-ZQH45-0548-19031509\",\r\n\t\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t\t\r\n\t],\r\n\t\"aUIs\": [\r\n\t\t\"AADEGR-ZQH45-0548-19031509\",\r\n\t\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t],\r\n\t\"Destination_ID3\": [\r\n\t\t\"AADEGR-ZQH45-0548-19031509\",\r\n\t\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t],\r\n\t\"Destination_ID4\": \r\n\t[\"AADEGR-ZQH45-0548-19031509\",\r\n\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t]\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:1350/api/events/Dispatch33I",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "1350",
+          "path": [
+            "api",
+            "events",
+            "Dispatch33I"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SendEvent_Aggregation32I",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0IiwianRpIjoiODhjY2U3YjMtNWY1YS00MmIzLWE3OWYtN2JmNDMyMjFhMjNlIiwiZXhwIjoxNTU0MzgyNjQ2LCJpc3MiOiJzZWxmIiwiYXVkIjoidGVzdCJ9.DsqYAgw0xoKfoRfNcyZWhy7zUZYeglUJbtJHDEZ8Rp3BhIkBLdO9xk8v_SkiLl6yxDpDyNIGrDZMIeGGI85dSA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"File_Date\": \"2019-05-28T08:45:20\",\r\n\t\"File_ID\": \"ftp33-3_20190528084520.csv\",\r\n\t\"Aggregation_ID\": 100,\r\n\t\"Message_Type\": \"3-3\",\r\n\t\"F_ID\": \"EZD145689-F1\",\r\n\t\"EO_ID\": \"EZD145689\",\r\n\t\"Event_Time\": \"2019-05-28T08:45:20\",\r\n\t\"aUI\": \"test\",\r\n\t\"Aggregation_Type\": 1,\r\n\t\"aUI_comment\": \"test\",\r\n\t\"DepartmentID\" : 1,\r\n\t\"Aggregated_UIs1\": [\r\n\t\t\"AADEGR-ZQH45-0548-19031509\",\r\n\t\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t\t\r\n\t],\r\n\t\"Aggregated_UIs2\": [\r\n\t\t\"AADEGR-ZQH45-0548-19031509\",\r\n\t\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t]\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:1350/api/events/Aggregation32I",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "1350",
+          "path": [
+            "api",
+            "events",
+            "Aggregation32I"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SendEvent_Arrival34I",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0IiwianRpIjoiYTEyZDUwNjQtNGJiYy00NWI1LWE5ODYtYjkwZWZhMWZjZTlkIiwiZXhwIjoxNTU0MzY4NDczLCJpc3MiOiJzZWxmIiwiYXVkIjoidGVzdCJ9.goJHkA1v40mEmVBoPsNWAwFdMZ4Yic0Kxo5kHVgy_GYFFmLFAJ-U7HMqJeRD6kD2doU1QbbjhYzwdz4q2ojkdQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"File_Date\": \"2019-05-28T08:45:20\",\r\n\t\"File_ID\": \"ftp33-3_20190528084520.csv\",\r\n\t\"Arrival_ID\": \"O-356\",\r\n\t\"Invoice_Number\": \"3test3\",\r\n\t\"Dispatch_ID\": \"test\",\r\n\t\"Message_Type\": \"3-3\",\r\n\t\"EO_ID\": \"EZD145689\",\r\n\t\"DepartmentID\" : null,\r\n\t\"F_ID\": \"F-654\",\r\n\t\"Event_Time\": \"2019-05-28T08:45:20\",\r\n\t\"Product_Return\" : true,\r\n\t\"UI_Type\": 3,\r\n\t\"Arrival_comment\": \"������������ ��������� D-356\",\r\n\t\"upUIs\": [\r\n\t\t\"AADEGR-ZQH45-0548-19031509\",\r\n\t\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t\t\r\n\t],\r\n\t\"aUIs\": [\r\n\t\t\"AADEGR-ZQH45-0548-19031509\",\r\n\t\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t]\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:1350/api/events/Arrival34I",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "1350",
+          "path": [
+            "api",
+            "events",
+            "Arrival34I"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SendEvent_Payment43I",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0IiwianRpIjoiNmMyYzBmM2UtMGVjNC00ODk0LTk5YTgtYzJiOWIxMTg5ZDFmIiwiZXhwIjoxNTU0Mzc3MTgwLCJpc3MiOiJzZWxmIiwiYXVkIjoidGVzdCJ9.TdEYNvCMqx_JXu38S6NInWaPR1_ZT_E-6-4hInoky-WJvGtXI8TQAaQo6W0csdkZYj3-MW6ODgKkPCYmaRORTQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"File_Date\": \"2019-05-28T08:45:20\",\r\n\t\"File_ID\": \"ftp33-3_20190528084520.csv\",\r\n\t\"Payment_ID\" : 100,\r\n\t\"Message_Type\": \"3-3\",\r\n\t\"Event_Time\": \"2019-05-28T08:45:20\",\r\n\t\"Payment_Date\": \"2019-05-28T08:45:20\",\r\n\t\"Payment_Type\" : 2,\r\n\t\"Payment_Amount\": 2.3,\r\n\t\"Payment_Currency\": \"1\",\r\n\t\"Payment_Payer1\": null,\r\n\t\"Payment_Payer2\" : \"test\",\r\n\t\"Payer_Name\" : \"test\",\r\n\t\"EO_ID\": \"EZD145689\",\r\n\t\"Payer_Address\": \"test\",\r\n\t\"Payer_CountryReg\": \"EU'\",\r\n\t\"Payer_TAX_N\": \"test\",\r\n\t\"Payment_Recipient\": \"test\",\r\n\t\"Payment_Invoice\": null,\r\n\t\"Invoice_Paid\": \"test\",\r\n\t\"DertmentId\" : null,\r\n\t\"UI_Type\": 3,\r\n\t\"Payment_comment\": \"������������ ��������� D-356\",\r\n\t\"upUIs\": [\r\n\t\t\"AADEGR-ZQH45-0548-19031509\",\r\n\t\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t\t\r\n\t],\r\n\t\"aUIs\": [\r\n\t\t\"AADEGR-ZQH45-0548-19031509\",\r\n\t\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t]\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:1350/api/events/Payment43I",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "1350",
+          "path": [
+            "api",
+            "events",
+            "Payment43I"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SendEvent_VendingVan37I",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0IiwianRpIjoiYTEyZDUwNjQtNGJiYy00NWI1LWE5ODYtYjkwZWZhMWZjZTlkIiwiZXhwIjoxNTU0MzY4NDczLCJpc3MiOiJzZWxmIiwiYXVkIjoidGVzdCJ9.goJHkA1v40mEmVBoPsNWAwFdMZ4Yic0Kxo5kHVgy_GYFFmLFAJ-U7HMqJeRD6kD2doU1QbbjhYzwdz4q2ojkdQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"File_Date\": \"2019-05-28T08:45:20\",\r\n\t\"File_ID\": \"ftp33-3_20190528084520.csv\",\r\n\t\"Order_Number\": \"O-356\",\r\n\t\"Message_Type\": \"3-3\",\r\n\t\"Event_Time\": \"2019-05-28T08:45:20\",\r\n\t\"F_ID\": \"EZD145689-F1\",\r\n\t\"Destination_ID1\": 2,\r\n\t\"Destination_ID2\": \"F-654\",\r\n\t\"Destination_ID5\": \"6\",\r\n\t\"DepartmentId\" : null,\r\n\t\"DepartmentCode\" : null,\r\n\t\"EO_ID\": \"EZD145689\",\r\n\t\"Transport_mode\": 3,\r\n\t\"Transport_vehicle\": \"���-4536\",\r\n\t\"Transport_cont1\": false,\r\n\t\"Transport_cont2\": \"7\",\r\n\t\"Transport_s1\": false,\r\n\t\"Transport_s2\": \"6\",\r\n\t\"EMCS\": false,\r\n\t\"EMCS_ARC\": \"20\",\r\n\t\"SAAD\": false,\r\n\t\"SAAD_number\": \"3\",\r\n\t\"Exp_Declaration\": false,\r\n\t\"Exp_ DeclarationNumber\": \"1\",\r\n\t\"UI_Type\": 3,\r\n\t\"Dispatch_comment\": \"������������ ��������� D-356\",\r\n\t\"upUIs\": [\r\n\t\t\"AADEGR-ZQH45-0548-19031509\",\r\n\t\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t\t\r\n\t],\r\n\t\"aUIs\": [\r\n\t\t\"AADEGR-ZQH45-0548-19031509\",\r\n\t\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t],\r\n\t\"Destination_ID3\": [\r\n\t\t\"AADEGR-ZQH45-0548-19031509\",\r\n\t\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t],\r\n\t\"Destination_ID4\": \r\n\t[\"AADEGR-ZQH45-0548-19031509\",\r\n\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t]\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:1350/api/events/VendingVan37I",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "1350",
+          "path": [
+            "api",
+            "events",
+            "VendingVan37I"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SendEvent_TransLoading35I",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0IiwianRpIjoiYTEyZDUwNjQtNGJiYy00NWI1LWE5ODYtYjkwZWZhMWZjZTlkIiwiZXhwIjoxNTU0MzY4NDczLCJpc3MiOiJzZWxmIiwiYXVkIjoidGVzdCJ9.goJHkA1v40mEmVBoPsNWAwFdMZ4Yic0Kxo5kHVgy_GYFFmLFAJ-U7HMqJeRD6kD2doU1QbbjhYzwdz4q2ojkdQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"File_Date\": \"2019-05-28T08:45:20\",\r\n\t\"File_ID\": \"ftp33-3_20190528084520.csv\",\r\n\t\"Order_Number\": \"O-356\",\r\n\t\"Message_Type\": \"3-3\",\r\n\t\"Event_Time\": \"2019-05-28T08:45:20\",\r\n\t\"F_ID\": \"EZD145689-F1\",\r\n\t\"Destination_ID1\": 2,\r\n\t\"Destination_ID2\": \"F-654\",\r\n\t\"Destination_ID5\": \"6\",\r\n\t\"DepartmentId\" : null,\r\n\t\"DepartmentCode\" : null,\r\n\t\"EO_ID\": \"EZD145689\",\r\n\t\"Transport_mode\": 3,\r\n\t\"Transport_vehicle\": \"���-4536\",\r\n\t\"Transport_cont1\": false,\r\n\t\"Transport_cont2\": \"7\",\r\n\t\"Transport_s1\": false,\r\n\t\"Transport_s2\": \"6\",\r\n\t\"EMCS\": false,\r\n\t\"EMCS_ARC\": \"20\",\r\n\t\"SAAD\": false,\r\n\t\"SAAD_number\": \"3\",\r\n\t\"Exp_Declaration\": false,\r\n\t\"Exp_ DeclarationNumber\": \"1\",\r\n\t\"UI_Type\": 3,\r\n\t\"Dispatch_comment\": \"������������ ��������� D-356\",\r\n\t\"upUIs\": [\r\n\t\t\"AADEGR-ZQH45-0548-19031509\",\r\n\t\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t\t\r\n\t],\r\n\t\"aUIs\": [\r\n\t\t\"AADEGR-ZQH45-0548-19031509\",\r\n\t\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t],\r\n\t\"Destination_ID3\": [\r\n\t\t\"AADEGR-ZQH45-0548-19031509\",\r\n\t\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t],\r\n\t\"Destination_ID4\": \r\n\t[\"AADEGR-ZQH45-0548-19031509\",\r\n\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t]\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:1350/api/events/TransLoading35I",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "1350",
+          "path": [
+            "api",
+            "events",
+            "TransLoading35I"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SendEvent_Invoice41I",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0IiwianRpIjoiOGQxMmIwNGEtNWE0ZS00ZGJjLWEwNDctZDBmYzRhYjYyM2RkIiwiZXhwIjoxNTU0MTk1NDUwLCJpc3MiOiJzZWxmIiwiYXVkIjoidGVzdCJ9.M-x84P6fvwhPtH1wAAB1JWrzK8icGo61b4iA1UMhx37cuSsinZF9SN8k1XtU9uqwIzlzjkUVv0oHATWD4JtaMQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \r\n  \"Order_Number\": \"2019-01��001936\",\r\n  \"Message_Type\": \"4-1\",\r\n  \"EO_ID\": \"EZD12345\",\r\n  \"Event_Time\": \"2019-03-19T15:00:00\",\r\n  \"Invoice_Type1\": 1,\r\n  \"Invoice_Type2\": null,\r\n  \"Invoice_Number\": \"2019-01��002111\",\r\n  \"Invoice_Date\": \"2019-03-19T00:00:00\",\r\n  \"Invoice_Seller\": \"EZD123456\",\r\n  \"Invoice_Buyer1\": 0,\r\n  \"Invoice_Buyer2\": \"RS1234\",\r\n  \"Buyer_Name\": null,\r\n  \"Buyer_Address\": null,\r\n  \"Buyer_CountryReg\": null,\r\n  \"Buyer_TAX_N\": null,\r\n  \"First_Seller_EU\": 0,\r\n  \"Invoice_Net\": 987.65,\r\n  \"Invoice_Currency\": \"EUR\",\r\n  \"UI_Type\": 2,\r\n  \"Invoice_comment\": \".\",\r\n  \"upUIs\": [\r\n  {\r\n  \t\"upUIs\":  \"BBEFGR-PKL43-11111111\"\r\n  },\r\n  {\r\n  \t\"upUIs\":  \"BBEFGR-PKL43-11111111\"\r\n  }\r\n  ],\r\n  \"aUIs\": [\r\n    \r\n  {\r\n  \t\"aUIs\":  \"BBEFGR-PKL43-11111111\"\r\n  }\r\n  \r\n  ],\r\n  \"Product_Items_1\": [{\r\n   \"Product_Items_1\" : \"BBEFGR-PKL43-33333333\"\r\n  }\r\n  ],\r\n  \"Product_Items_2\": [\r\n    {\r\n   \"Product_Items_2\" : \"BBEFGR-PKL43-33333333\"\r\n  }\r\n  ],\r\n  \"Product_Price\": [\r\n  \t{\r\n   \"Product_Price\" :  0.0\r\n  \t}\r\n  ],\r\n  \"DepartmentID\" : 2\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:1350/api/events/Invoice41I",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "1350",
+          "path": [
+            "api",
+            "events",
+            "Invoice41I"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SendEvent_Order42I",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0IiwianRpIjoiM2M5YjM5NmItNTllNi00YWM5LTg3ZDctZDliMmQxZDgwMmQ1IiwiZXhwIjoxNTU0MzcwNjUxLCJpc3MiOiJzZWxmIiwiYXVkIjoidGVzdCJ9.z89GbhvKlQYgBeloqLk-IoOgzhr01ksS52YXd073QRHIGcbBV9E9HWkD1bvkpKJzT1RmHiAo3UvUbHxe9vERhA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"Record_Type\": 0,\r\n  \"File_Date\": \"2019-05-28T08:30:45\",\r\n  \"File_ID\": \"4-2_20190528083045.csv\",\r\n  \"Invoice_Number\": \"I-1456\",\r\n  \"Message_Type\": \"4-2\",\r\n  \"EO_ID\": \"EZD145689\",\r\n  \"Event_Time\": \"2019-05-28T08:00:00\",\r\n  \"Order_Number\": \"O-356\",\r\n  \"Order_Date\": \"2019-05-26T00:00:00\",\r\n  \"UI_Type\": 3,\r\n  \"Order_comment\": \"Λόγω τεχνικού προβλήματος στο μηχανογραφικό σύστημα.\",\r\n  \"upUIs\": [\r\n    \"AADEGR-ZQH45-0548-19031509\",\r\n    \"AADEGR-FGT67-0548-19031509\",\r\n    \"AADEGR-HJK56-0548-19031509\",\r\n    \"AADEGR-KLS92-0548-19031509\",\r\n    \"AADEGR-KLS93-0548-19031509\",\r\n    \"AADEGR-KLS94-0548-19031509\"\r\n  ],\r\n  \"aUIs\": [\r\n    \"AADEGR-LKP32-FID15-19021310\",\r\n    \"AADEGR-LKP33-FID15-19021310\",\r\n    \"AADEGR-LKP34-FID15-19021310\",\r\n    \"AADEGR-LKP35-FID15-19021310\",\r\n    \"AADEGR-LKP36-FID15-19021310\"\r\n  ]\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:1350/api/events/Order42I",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "1350",
+          "path": [
+            "api",
+            "events",
+            "Order42I"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ScanData",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0IiwianRpIjoiM2M5YjM5NmItNTllNi00YWM5LTg3ZDctZDliMmQxZDgwMmQ1IiwiZXhwIjoxNTU0MzcwNjUxLCJpc3MiOiJzZWxmIiwiYXVkIjoidGVzdCJ9.z89GbhvKlQYgBeloqLk-IoOgzhr01ksS52YXd073QRHIGcbBV9E9HWkD1bvkpKJzT1RmHiAo3UvUbHxe9vERhA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"Event_Type\": \"tet\",\r\n\t\"Event_Id\": \"test\",\r\n\t\"EO_ID\": \"EZD145689\",\r\n\t\"F_ID\": \"EZD145689-F1\",\r\n\t\"UI_Type\": \"2\",\r\n\t\"Dispatch_comment\": \"������������ ��������� D-356\",\r\n\t\"upUIs\": [\r\n\t\t\"AADEGR-ZQH45-0548-19031509\",\r\n\t\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t\t\r\n\t],\r\n\t\"aUIs\": [\r\n\t\t\"AADEGR-ZQH45-0548-19031509\",\r\n\t\t\"AADEGR-ZQH45-0548-19031509\"\r\n\t]\r\n\t\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:1350/api/ScanData",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "1350",
+          "path": [
+            "api",
+            "ScanData"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SendEvent_Disaggregation36I",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0IiwianRpIjoiNjlkYjQ3MTMtMGNhOS00MWJiLWI2MzMtNmQ0M2NhNWI0MDdmIiwiZXhwIjoxNTUzODc0MjYxLCJpc3MiOiJzZWxmIiwiYXVkIjoidGVzdCJ9.My09WsS-OwKYvxMxYYqA5sHrTmIGFa1kvZUp8fu7w6SeVcOfKDS_ER7cDHg8vROwZsP_dGI9--OajQmPWNrKGQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"File_Date\": \"2019-05-28T08:30:45\",\r\n  \"File_ID\": \"4-2_20190528083045.csv\",\r\n  \"Disaggregation_ID\": 100,\r\n  \"Message_Type\": \"4-2\",\r\n  \"EO_ID\": \"EZD145689\",\r\n  \"F_ID\": \"EZD\",\r\n  \"Event_Time\": \"2019-05-26T00:00:00\",\r\n  \"aUI\": \"dsg\",\r\n  \"disaUI_comment\": \"Λόγω τεχνικού προβλήματος στο μηχανογραφικό σύστημα.\",\r\n  \"DepartmentID\" : 1\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:1350/api/Disaggregation36I",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "1350",
+          "path": [
+            "api",
+            "Disaggregation36I"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
