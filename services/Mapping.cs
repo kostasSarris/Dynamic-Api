@@ -31,14 +31,14 @@ namespace TPDMS.RestApi.services
 
                     var propert7 = props.FirstOrDefault(x => x.Name == "Propert7");
                     var property8 = props.FirstOrDefault(x => x.Name == "Propert8");
-                    var upUIsValue = propert7?.GetValue(propert7.GetGetMethod().IsStatic ? null : entryObject);
-                    var aUIsValue = property8?.GetValue(property8.GetGetMethod().IsStatic ? null : entryObject);
+                    var propert7Value = propert7?.GetValue(propert7.GetGetMethod().IsStatic ? null : entryObject);
+                    var property8Value = property8?.GetValue(property8.GetGetMethod().IsStatic ? null : entryObject);
 
                     // Handle duplicates for IEnumerable<object> with reflection
                     if (Duplicates.Handler(property8, propert7, aUIsValue, upUIsValue, entryObject))
                     {
-                        aUIsValue = property8?.GetValue(property8.GetGetMethod().IsStatic ? null : entryObject);
-                        upUIsValue = propert7?.GetValue(propert7.GetGetMethod().IsStatic ? null : entryObject);
+                        propert7Value = property8?.GetValue(property8.GetGetMethod().IsStatic ? null : entryObject);
+                        property8Value = propert7?.GetValue(propert7.GetGetMethod().IsStatic ? null : entryObject);
                     }
 
                     #region some business for specific entity
